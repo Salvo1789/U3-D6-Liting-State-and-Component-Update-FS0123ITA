@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Button, Card, Badge } from "react-bootstrap";
 import "./SingleBook.css";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -39,6 +40,11 @@ class SingleBook extends Component {
             </Badge>
           </div>
         </Card.Body>
+        {this.state.selected && (
+            <Card.Footer className="text-muted">
+              <CommentArea asin={this.props.asin} />
+            </Card.Footer>
+          )}
       </Card>
     );
   }
