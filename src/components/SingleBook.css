@@ -1,0 +1,8 @@
+.book-card {
+    transition: transform 0.8s;
+  }
+  
+  .book-card:hover {
+    background: linear-gradient(white, forestgreen);
+    transform: translate3D(0,-1px,0) scale(1.03);
+  }
